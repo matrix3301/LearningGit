@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">   
+	<meta charset="UTF-8">
+	<title>碧欧泉biotherm</title>
+	<link rel="stylesheet" href="css/resetcss.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.hammer-full.min.js"></script>
+</head>
+<body>
+	<div id="exchange">
+		<div class="tabs">
+			<ul>
+				<li class="active"><a>3000积分</a></li><li><a>6000积分</a></li><li><a>9000积分</a></li>
+			</ul>
+		</div>
+
+		<header>
+			<img src="images/header3.png">
+		</header>
+		<div class="product">
+
+			<div class="list">
+				<div class="row">
+					<div class="item">
+						<img src="images/3000/1.jpg">
+					</div>
+					<div class="item">
+						<img src="images/3000/2.jpg">
+					</div>
+				</div>
+				<!--<div class="row">
+					<div class="item">
+						<img src="images/3000/3.jpg">
+					</div>
+					<div class="item">
+						<img src="images/3000/4.jpg">
+					</div>
+				</div>-->
+			</div>
+
+			<div class="list" style="display:none;">
+				<div class="row">
+					<div class="item">
+						<img src="images/6000/1.jpg">
+					</div>
+					<div class="item">
+						<img src="images/6000/2.jpg">
+					</div>
+				</div>
+				
+			</div>
+
+
+			<div class="list" style="display:none;">
+				<div class="row">
+					<div class="item">
+						<img src="images/9000/1.jpg">
+					</div>
+					<div class="item">
+						<img src="images/9000/2.jpg">
+					</div>
+				</div>
+				<!--<div class="row">
+					<div class="item">
+						<img src="images/9000/3.jpg">
+					</div>
+					<div class="item">
+						<img src="images/9000/4.jpg">
+					</div>
+				</div>-->
+				
+			</div>
+
+
+		</div>
+		<a href="http://m.biotherm.com.cn/biotherm/login.jsp" class="btn go-site">
+			前往碧欧泉官网进行兑换<b class="b1"></b><b class="b2"></b> 
+		</a>
+		<p style="color:#97aeb8;margin:5% auto 0;width:90%;line-height:20px;font-size:14px;">积分兑换奖品以实际库存为准。若无法兑换所选产品，烦请选择同等积分其他产品，为您带来的麻烦敬请谅解。</p>
+		<p style="color:#97aeb8;margin:0 auto;width:90%;line-height:20px;font-size:14px;">如有疑问，请详询：<a style="color:#97aeb8;text-decoration: underline;" href="tel:400-821-5518">400-821-5518</a></p>
+
+	</div>
+	<script type="text/javascript">
+
+		$('.tabs li').hammer().on('tap',  function() {
+			var _this = $(this);
+			if(_this.hasClass('active')) return;
+			var i = $('.tabs li').index(this);
+			_this.siblings('.active').removeClass('active');
+			_this.addClass('active');
+			$('.product .list').hide();
+			$('.product .list').eq(i).show();
+			$(window).scrollTop(0);
+		});
+
+	</script>
+
+</body>
+</html>
